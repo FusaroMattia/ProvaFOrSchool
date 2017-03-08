@@ -48,20 +48,20 @@ public class Coda {
 		Nodo p = head;
 		String lista;
 		if (p == tail) // coda di un solo elemento?
-			lista = new String("head/tail->");
+			lista = new String("->");
 		else
-			lista = new String("head->");
+			lista = new String("->");
 		if (p == null)
-			return lista + "null";
+			return lista + " ";
 		while (p != null) {
-			lista = lista + "[" + p.getInfo().toString() + "|";
+			lista = lista + " " + p.getInfo().toString() + " + ";
 			if (p.getLink() == tail)
-				lista = lista + "+]-(tail)->";
+				lista = lista + " ";
 			else {
 				if (p.getLink() == null)
-					lista = lista + "null]";
+					lista = lista + "FINE";
 				else
-					lista = lista + "+]->";
+					lista = lista + " + ";
 			}
 			p = p.getLink();
 		}

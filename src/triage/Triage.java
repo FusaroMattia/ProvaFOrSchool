@@ -32,10 +32,11 @@ public class Triage {
 	}
 
 	public void Escili(){
+		System.out.println("CODA VERDE");
 		System.out.println(R1);
-		System.out.println("/n");
+		System.out.println("CODA GIALLA");
 		System.out.println(R2);
-		System.out.println("/n");
+		System.out.println("CODA ROSSA");
 		System.out.println(R3);
 	}
 	

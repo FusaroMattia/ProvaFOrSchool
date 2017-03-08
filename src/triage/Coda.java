@@ -37,4 +37,35 @@ public class Coda {
 		return p.getInfo();
 	}
 
+	public boolean isEmpty() {
+		if (head == null) {
+		return false;
+		}else{
+		return true;	
+		}
+	}
+	public String toString() {
+		Nodo p = head;
+		String lista;
+		if (p == tail) // coda di un solo elemento?
+			lista = new String("head/tail->");
+		else
+			lista = new String("head->");
+		if (p == null)
+			return lista + "null";
+		while (p != null) {
+			lista = lista + "[" + p.getInfo().toString() + "|";
+			if (p.getLink() == tail)
+				lista = lista + "+]-(tail)->";
+			else {
+				if (p.getLink() == null)
+					lista = lista + "null]";
+				else
+					lista = lista + "+]->";
+			}
+			p = p.getLink();
+		}
+		return lista;
+	}
+
 }
